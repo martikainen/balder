@@ -1,0 +1,13 @@
+<p class="links">
+  <% if @previous.nil? %>
+    Previous
+  <% else %>
+      <%= link_to "Previous", [@photo.album.collections.first, @photo.album, @previous] %>
+  <% end %>
+          |
+  <% if @next.nil? %>
+    Next
+  <% else %>
+      <%= link_to "Next", [@photo.album.collections.first, @photo.album, @next] %>
+  <% end %>
+</p>

@@ -11,7 +11,7 @@ config/settings.yml
 config/deploy.rb
 config/deploy
 Capfile
-photos
+./photos
 public/thumbs
 public/uploads
 vendor/cache
