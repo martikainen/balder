@@ -54,6 +54,21 @@ class Photo < ActiveRecord::Base
   def _delete
     0
   end
+
+  def is_title_photo
+    self.album.title_photo == self
+  end
+
+  def is_title_photo= value
+    if value
+      self.album.title_photo = self
+    else
+      if is_title_photo
+        self.album.title_photo = nil
+      end
+    end
+    self.album.save!
+  end
   
   protected
 

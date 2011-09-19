@@ -9,7 +9,7 @@ gem 'carrierwave'
 
 # -- Database
 # SQLite
-#gem 'sqlite3-ruby'
+gem 'sqlite3-ruby'
 # MySQL:
 #gem 'mysql2', '~> 0.2.7' # Use version 0.3 and up for Rails 3.1
 # PostgreSQL:

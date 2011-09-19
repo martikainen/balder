@@ -1,6 +1,7 @@
 .bundle
 .rvmrc
 db/*.sqlite3
+db/*.sqlite
 log/*.log
 tmp
 .DS_Store
@@ -15,3 +16,4 @@ Capfile
 public/thumbs
 public/uploads
 vendor/cache
+uploads
