@@ -1,7 +1,22 @@
-<% for user in @users %>
-<h2><%= link_to user.name || user.email , user %></h2>
-<% end %>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Logins</th>
+    <th>Last Access</th>
+  </tr>
+  </thead>
+  <% for user in @users %>
+      <tr>
+        <td><%= link_to user.name || user.email, user %></td>
+        <td><%= link_to user.email, "mailto:#{user.email}" %></td>
+        <td><%= user.login_count %></td>
+        <td><%= user.last_request_at %></td>
+      </tr>
+  <% end %>
+</table>
 
 <%= content_for :action_links do %>
-<%= link_to "New user", new_user_path %>
+    <%= link_to "New user", new_user_path %> |
 <% end %>
