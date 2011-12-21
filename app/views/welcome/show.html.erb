@@ -4,4 +4,8 @@
 <ul>
   <li><%= link_to "My Account / Om mig", edit_account_path(current_user)  %></li>
   <li><%= link_to "Photo Collections / Foton", collections_path %></li>
+  <% if has_role?("admin") %>
+      <br/>
+      <%= link_to "Manage Users", users_path %>
+  <% end %>
 </ul>
